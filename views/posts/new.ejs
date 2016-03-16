@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <% include ../partials/head %>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
+<!-- main start -->
+
+<!-- vkews/posts/index.ejs -->
+<div class="posts">
+<div class="new">
+  <h3>New Post</h3>
+  <form class="posts_form" action="/posts" method="post">
+    <label>Title</label>
+    <input type="text" name="post[title]" value="">
+    <label>Body</label>
+    <textarea name="post[body]"></textarea>
+    <div class="float_right">Auther: <%=user.nickname %></div>
+    <button type="submit">Submit</button>
+  </form>
+  <a href="/posts"><button>Back</button></a>
+</div>
+</div>
+<!-- main end -->
+<footer>
+  <% include ../partials/footer %>
+</footer>
+</body>
+</html>
